@@ -33,7 +33,7 @@ numbers = [1, 2, 2, 5, 8, 10, 10]
 def count(array)
   count_hash = {}
   array.each do |number|
-    count_hash[number] = arrayp.count
+    count_hash[number] = array.count
   end
 end
 
