@@ -35,6 +35,7 @@ def count(array)
   array.each do |number|
     count_hash[number] = array.count
   end
+  count_hash
 end
 
 puts count(numbers)
