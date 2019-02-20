@@ -33,7 +33,9 @@ numbers = [1, 2, 2, 5, 8, 10, 10]
 def count(array)
   count_hash = {}
   array.each do |number|
-    count_hash[number] = array.count(number)
+    if !count_hash.has_key?(number)
+      count_hash[number] = array.count(number)
+    end
   end
   count_hash
 end
