@@ -1,3 +1,5 @@
+require "pry"
+
 katz_deli = []
 
 def line(current_line)
@@ -10,9 +12,12 @@ def line(current_line)
   end
 end
 
-def take_a_number(current_line, name)
-  current_line.push("#{name}")
-  puts "Welcome, #{current_line.last}. You are number #{current_line.length} in line."
+$counter = 0 
+
+
+def take_a_number(current_line)
+    $counter += 1 
+    puts "Your number is #{$counter}. You are number #{$counter} in line."
 end
 
 def now_serving(current_line)
@@ -22,3 +27,14 @@ def now_serving(current_line)
     puts "Currently serving #{current_line.shift}."
   end
 end
+
+numbers = [1, 2, 2, 5, 8, 10, 10]
+
+def count(array)
+  count_hash = {}
+  array.each do |number|
+    count_hash[number] = number.count
+  end
+end
+
+count(numbers)
